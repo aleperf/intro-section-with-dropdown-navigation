@@ -1,0 +1,266 @@
+@use '../style/index.scss'as *;
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+    font-family: $text-font;
+
+
+    &-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+
+        @media screen and (min-width: 800px) {
+            width: auto;
+        }
+
+
+
+        &__logo {
+            width: 100px;
+            height: 32px;
+            margin: 0.5rem;
+
+            @media screen and (min-width: 800px) {
+                margin: 0.5rem 3rem 0.5rem 1rem;
+
+            }
+
+        }
+
+        &__menu {
+            width: 50px;
+            height: 20px;
+            display: block;
+            opacity: 1;
+
+
+            @media screen and (min-width: 800px) {
+                diplay: none;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                border: 1px solid red;
+            }
+        }
+
+
+
+
+    }
+
+
+
+    &__menu-item {
+        color: $medium-gray-color;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin: 1rem;
+        position: relative;
+
+
+
+
+        a {
+            text-decoration: none;
+
+            &:visited {
+                color: inherit;
+            }
+
+
+        }
+
+        &-summary {
+            display: flex;
+
+
+            &.active {
+                color: $almost-black-color;
+                font-weight: 700;
+
+
+            }
+        }
+
+        &-summary:hover {
+            color: $almost-black-color;
+
+            font-weight: 700;
+        }
+
+        &__arrow-down {
+            margin: 2px;
+
+
+            path {
+                stroke: currentColor;
+
+            }
+        }
+
+
+
+        &__arrow-up {
+            margin: 2px;
+
+            path {
+                stroke: currentColor;
+            }
+        }
+
+
+        img {
+            width: 12px;
+            height: 8px;
+            display: block;
+            margin: 2px;
+
+        }
+
+
+    }
+
+
+    ul {
+
+        display: none;
+        list-style-type: none;
+        margin-right: auto;
+
+
+        @media screen and (min-width: 800px) {
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+
+    &-button {
+        border: none;
+        background-color: transparent;
+        margin: 2px;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+
+        &__img {
+            transform: scale(1.2);
+            margin-left: 2px;
+
+            path {
+                stroke: currentColor;
+            }
+
+
+
+        }
+    }
+
+    &__btn-container {
+
+        display: none;
+        opacity: 0;
+
+
+        @media screen and (min-width: 800px) {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5rem;
+
+
+        }
+
+    }
+
+    &__btn--login {
+        font-family: inherit;
+        color: $medium-gray-color;
+        background-color: transparent;
+        margin: 0 3rem;
+        border: none;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            color: $almost-black-color;
+        }
+    }
+
+    &__btn--register {
+
+        font-family: inherit;
+        color: $medium-gray-color;
+        background: transparent;
+        padding: 1.3rem 2.2rem;
+        border-radius: 15px;
+        border: 1px solid $medium-gray-color;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $almost-black-color;
+            border: 1px solid $almost-black-color;
+        }
+    }
+
+
+
+
+}
+
+.submenu {
+    background-color: white;
+    padding: 2rem;
+    width: max-content;
+    position: absolute;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.08);
+    cursor: auto;
+
+
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+
+
+        .submenu-item {
+
+            display: flex;
+            margin-left: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: $medium-gray-color;
+
+
+            img {
+                margin-right: 10px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}

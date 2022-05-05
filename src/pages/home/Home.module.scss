@@ -1,0 +1,19 @@
+@use '../../style/index.scss'as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 85%;
+
+    @media screen and (min-width: 50em) {
+        flex-direction: row-reverse;
+
+    }
+
+    main {
+        width: 60%;
+        border: 1px solid red;
+    }
+
+}
