@@ -6,7 +6,9 @@ const Home = () => {
     <div className={classes['home']}>
       <Hero />
       <main>
-        <h1>Here Goes the Main Content</h1>
+        <div className={classes["home__main-container"]}>
+          <h1>Make Remote Work</h1>
+        </div>
       </main>
     </div>
   );
