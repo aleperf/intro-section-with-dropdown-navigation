@@ -1,6 +1,7 @@
 import classes from './Navbar.module.scss';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useGlobablContext } from '../context';
 import logo from '../images/logo.svg';
 import menu from '../images/icon-menu.svg';
 import iconCalendar from '../images/icon-calendar.svg';
@@ -11,8 +12,13 @@ import { ReactComponent as ArrowUp } from '../images/icon-arrow-up.svg';
 import { ReactComponent as ArrowDown } from '../images/icon-arrow-down.svg';
 
 const Navbar = () => {
-  const [isFeaturesClicked, setIsFeaturesClicked] = useState(false);
-  const [isCompanyClicked, setIsCompanyClicked] = useState(false);
+
+  const {
+    isFeaturesOpen,
+    isCompanyOpen,
+    handleCompanyOpen,
+    handleFeaturesOpen,
+  } = useGlobablContext();
 
   const companyItems = [
     { name: 'History' },
@@ -26,14 +32,6 @@ const Navbar = () => {
     { name: 'Remainders', icon: iconReminders },
     { name: 'Planning', icon: iconPlanning },
   ];
-
-  const handleFeaturesOpen = () => {
-    setIsFeaturesClicked((prevValue) => setIsFeaturesClicked(!prevValue));
-  };
-
-  const handleCompanyOpen = () => {
-    setIsCompanyClicked((prevValue) => setIsCompanyClicked(!prevValue));
-  };
 
   return (
     <div className={classes['navbar']}>
@@ -60,23 +58,23 @@ const Navbar = () => {
         >
           <div
             className={
-              isFeaturesClicked
+              isFeaturesOpen
                 ? ` ${classes['navbar__menu-item-summary']} ${classes['active']}`
                 : classes['navbar__menu-item-summary']
             }
           >
             Features
             <button className={classes['navbar-button']}>
-              {!isFeaturesClicked && (
+              {!isFeaturesOpen && (
                 <ArrowDown className={classes['navbar-button__img']} />
               )}
-              {isFeaturesClicked && (
+              {isFeaturesOpen && (
                 <ArrowUp className={classes['navbar-button__img']} />
               )}
             </button>
           </div>
 
-          {isFeaturesClicked && (
+          {isFeaturesOpen && (
             <Submenu
               items={featuresItems}
               align={{ top: '40px', right: '5px' }}
@@ -90,22 +88,22 @@ const Navbar = () => {
         >
           <div
             className={
-              isCompanyClicked
+              isCompanyOpen
                 ? ` ${classes['navbar__menu-item-summary']} ${classes['active']}`
                 : classes['navbar__menu-item-summary']
             }
           >
             Company
             <button className={classes['navbar-button']}>
-              {!isCompanyClicked && (
+              {!isCompanyOpen && (
                 <ArrowDown className={classes['navbar-button__img']} />
               )}
-              {isCompanyClicked && (
+              {isCompanyOpen && (
                 <ArrowUp className={classes['navbar-button__img']} />
               )}
             </button>
           </div>
-          {isCompanyClicked && (
+          {isCompanyOpen && (
             <Submenu
               items={companyItems}
               align={{

@@ -5,15 +5,23 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import './index.css';
 import App from './App';
+import { AppProvider } from './context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} >
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/"
+          element={
+            <AppProvider>
+              <App />
+            </AppProvider>
+          }
+        >
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>
