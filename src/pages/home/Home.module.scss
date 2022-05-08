@@ -7,27 +7,150 @@
     margin: 0 auto;
     width: 100%;
 
+
+    font-family: $text-font;
+    color: $medium-gray-color;
+
+
     @media screen and (min-width: 50em) {
         flex-direction: row-reverse;
+        width: 80vw;
+
 
     }
 
+
+
     &__main-container {
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
+
 
 
         @media screen and (min-width: 50em) {
-            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 40vw;
+            text-align: justify;
+            margin-right: 50px;
+
+        }
+
+        //1000px
+        @media screen and (min-width: 62.5em) {
+            align-items: flex-start;
+
+            width: 40vw;
+            text-align: justify;
+            margin-right: 100px;
 
         }
 
         h1 {
             font-size: 3.5rem;
-            font-family: $text-font;
-            padding: 5rem 0;
+            color: $almost-black-color;
+            padding: 5rem 0 2rem 0;
             font-weight: 700;
+
+            //600px
+            @media screen and (min-width: 37.5em) {
+                font-size: 4rem;
+            }
+
+            @media screen and (min-width: 50em) {
+                font-size: 4.5rem;
+                padding: 0;
+                margin: 12rem 0 2rem 0;
+                text-align: start;
+
+                span {
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 75em) {
+                font-size: 7rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            font-weight: 400;
+            padding: 0 2rem;
+
+
+            @media screen and (min-width: 50em) {
+                padding: 2rem 0;
+                margin-right: 2rem;
+                width: 80%;
+
+
+            }
+        }
+    }
+
+    &__cta-btn {
+        border: 2px solid $almost-black-color;
+        background-color: $almost-black-color;
+        color: $almost-white-color;
+        font-family: inherit;
+        padding: 2rem 3rem;
+        margin: 2.5rem;
+
+        font-weight: 700;
+        font-size: 1.8rem;
+        border-radius: 15px;
+
+        @media screen and (min-width:50em) {
+            margin: 4rem 0 4rem;
+        }
+
+
+
+        &:hover {
+            cursor: pointer;
+            background-color: transparent;
+            color: $almost-black-color;
+        }
+
+    }
+
+    &__clients {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 2rem;
+
+        @media screen and (min-width: 50em) {
+            justify-content: space-between;
+
+
+        }
+
+        @media screen and (min-width: 62.5em) {
+
+            margin-top: 10rem;
+
+        }
+
+        img {
+            padding: 1rem;
+            width: 20%;
+            max-width: 15rem;
+
+
+
+            @media screen and (min-width: 50em) {
+                width: 8vw;
+            }
+
         }
     }
 

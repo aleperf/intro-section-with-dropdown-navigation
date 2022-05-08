@@ -1,5 +1,4 @@
 import classes from './Navbar.module.scss';
-import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useGlobablContext } from '../context';
 import logo from '../images/logo.svg';
