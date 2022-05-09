@@ -7,6 +7,7 @@
     height: 10rem;
     width: 100%;
     font-family: $text-font;
+    position: relative;
 
 
     &-container {
@@ -226,41 +227,3 @@
 
 }
 
-.submenu {
-    background-color: white;
-    padding: 2rem;
-    width: max-content;
-    position: absolute;
-    z-index: 100;
-    border-radius: 10px;
-    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.08);
-    cursor: auto;
-
-
-
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-
-
-        .submenu-item {
-
-            display: flex;
-            margin-left: 10px;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            color: $medium-gray-color;
-
-
-            img {
-                margin-right: 10px;
-                width: 18px;
-                height: 18px;
-            }
-        }
-    }
-}

@@ -8,6 +8,7 @@
     width: 100%;
 
 
+
     font-family: $text-font;
     color: $medium-gray-color;
 
@@ -16,6 +17,11 @@
         flex-direction: row-reverse;
         width: 80vw;
 
+    }
+
+    @media screen and (min-width: 150em) {
+        flex-direction: row-reverse;
+        width: 70vw;
 
     }
 
@@ -23,7 +29,7 @@
 
     &__main-container {
         display: flex;
-        flex: 1;
+        /* flex: 1; */
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -40,7 +46,7 @@
 
         }
 
-        //1000px
+
         @media screen and (min-width: 62.5em) {
             align-items: flex-start;
 
@@ -56,7 +62,7 @@
             padding: 5rem 0 2rem 0;
             font-weight: 700;
 
-            //600px
+
             @media screen and (min-width: 37.5em) {
                 font-size: 4rem;
             }

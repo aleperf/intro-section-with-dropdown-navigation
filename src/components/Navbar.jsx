@@ -9,14 +9,17 @@ import iconReminders from '../images/icon-reminders.svg';
 import iconPlanning from '../images/icon-planning.svg';
 import { ReactComponent as ArrowUp } from '../images/icon-arrow-up.svg';
 import { ReactComponent as ArrowDown } from '../images/icon-arrow-down.svg';
+import Sidebar from './Sidebar';
+import Submenu from './Submenu';
 
 const Navbar = () => {
-
   const {
     isFeaturesOpen,
     isCompanyOpen,
+    isSidebarOpen,
     handleCompanyOpen,
     handleFeaturesOpen,
+    handleSidebarOpen,
   } = useGlobablContext();
 
   const companyItems = [
@@ -34,6 +37,9 @@ const Navbar = () => {
 
   return (
     <div className={classes['navbar']}>
+      {isSidebarOpen && (
+        <Sidebar items={{ company: companyItems, features: featuresItems }} />
+      )}
       <div className={classes['navbar-container']}>
         <Link to="/">
           <img
@@ -47,6 +53,7 @@ const Navbar = () => {
           src={menu}
           alt="open menu"
           className={classes['navbar-container__menu']}
+          onClick={handleSidebarOpen}
         />
       </div>
       <ul>
@@ -132,23 +139,6 @@ const Navbar = () => {
         <button className={classes['navbar__btn--login']}>Login</button>
         <button className={classes['navbar__btn--register']}>Register</button>
       </div>
-    </div>
-  );
-};
-
-const Submenu = ({ items, align }) => {
-  return (
-    <div className={classes['submenu']} style={align}>
-      <ul>
-        {items.map((item) => {
-          return (
-            <li className={classes['submenu-item']} key={item.name}>
-              {item.icon && <img src={item.icon} alt={item.name} />}
-              {item.name}
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };

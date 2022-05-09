@@ -27,7 +27,7 @@ const Home = () => {
           <button className={classes['home__cta-btn']}>Learn more</button>
           <div className={classes['home__clients']}>
             {clients.map((client) => (
-              <img src={client.logo} alt={client.name} />
+              <img src={client.logo} alt={client.name} key={client.name} />
             ))}
           </div>
         </div>
