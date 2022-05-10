@@ -8,6 +8,8 @@
     width: 100%;
     font-family: $text-font;
     color: $medium-gray-color;
+    padding-bottom: 10rem;
+
 
 
     @media screen and (min-width: 50em) {
@@ -30,6 +32,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+
 
 
 
@@ -129,6 +132,7 @@
         justify-content: space-around;
         width: 100%;
         margin-top: 2rem;
+
 
         @media screen and (min-width: 50em) {
             justify-content: space-between;

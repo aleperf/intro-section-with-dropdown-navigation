@@ -3,18 +3,17 @@ import { Link } from 'react-router-dom';
 import { useGlobablContext } from '../context';
 import logo from '../images/logo.svg';
 import menu from '../images/icon-menu.svg';
-import Sidebar from './Sidebar';
 import NavMenu from './NavMenu';
 
 const Navbar = () => {
-  const { isSidebarOpen, handleSidebarOpen} = useGlobablContext();
+  const {  handleSidebarOpen} = useGlobablContext();
 
 
   return (
     <div className={classes['navbar']}>
-      {isSidebarOpen && (
+    {/*   {isSidebarOpen && (
         <Sidebar/>
-      )}
+      )} */}
       <div className={classes['navbar-container']}>
         <Link to="/">
           <img
