@@ -8,22 +8,16 @@
 
 
     @media screen and (min-width:50em) {
-        //800px
-
         background-image: url('../images/image-hero-desktop.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
         width: 40vw;
-        /*   height: 100vh;  */
-        /* height: 100vh; */
 
     }
 
     @media screen and (min-width:75em) {
         background-position: top center;
         margin-top: 2rem;
-
-
     }
 }

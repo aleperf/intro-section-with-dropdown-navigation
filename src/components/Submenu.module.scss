@@ -14,6 +14,8 @@
 
 
     @media screen and (min-width: 50em) {
+        display: flex;
+        flex-direction: column;
         background-color: white;
         padding: 2rem;
         position: absolute;

@@ -4,7 +4,7 @@ import { useGlobablContext } from '../context';
 
 import NavMenu from './NavMenu';
 
-const Sidebar = ({ items }) => {
+const Sidebar = () => {
   const { handleSidebarOpen } = useGlobablContext();
 
   return (

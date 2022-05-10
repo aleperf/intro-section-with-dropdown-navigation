@@ -1,10 +1,6 @@
 import classes from './NavMenu.module.scss';
 import { NavLink } from 'react-router-dom';
 import { useGlobablContext } from '../context';
-import iconCalendar from '../images/icon-calendar.svg';
-import iconTodo from '../images/icon-todo.svg';
-import iconReminders from '../images/icon-reminders.svg';
-import iconPlanning from '../images/icon-planning.svg';
 import { ReactComponent as ArrowUp } from '../images/icon-arrow-up.svg';
 import { ReactComponent as ArrowDown } from '../images/icon-arrow-down.svg';
 
@@ -16,20 +12,10 @@ const NavMenu = ({ isMobile }) => {
     isCompanyOpen,
     handleCompanyOpen,
     handleFeaturesOpen,
+    companyItems,
+    featuresItems,
   } = useGlobablContext();
 
-  const companyItems = [
-    { name: 'History' },
-    { name: 'Our Team' },
-    { name: 'Blog' },
-  ];
-
-  const featuresItems = [
-    { name: 'Todo List', icon: iconTodo },
-    { name: 'Calendar', icon: iconCalendar },
-    { name: 'Remainders', icon: iconReminders },
-    { name: 'Planning', icon: iconPlanning },
-  ];
 
   return (
     <ul className={classes['navmenu']}>
