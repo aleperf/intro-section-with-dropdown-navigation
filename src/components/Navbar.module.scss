@@ -131,10 +131,10 @@
     }
 
 
-    ul {
+    &-menu-container {
 
         display: none;
-        list-style-type: none;
+    /*     list-style-type: none; */
         margin-right: auto;
 
 
@@ -143,7 +143,25 @@
             flex-direction: row;
         }
 
+        ul {
+
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            // margin-right: auto;
+
+
+            @media screen and (min-width: 800px) {
+                display: flex;
+                flex-direction: row;
+            }
+
+        }
+
+
     }
+
+
 
 
     &-button {
@@ -226,4 +244,3 @@
 
 
 }
-
