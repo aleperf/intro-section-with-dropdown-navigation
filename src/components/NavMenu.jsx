@@ -16,20 +16,16 @@ const NavMenu = ({ isMobile }) => {
     featuresItems,
   } = useGlobablContext();
 
-
   return (
     <ul className={classes['navmenu']}>
-      <li
-        className={classes['navmenu__menu-item']}
-        key="features"
-        onClick={handleFeaturesOpen}
-      >
+      <li className={classes['navmenu__menu-item']} key="features">
         <div
           className={
             isFeaturesOpen
               ? ` ${classes['navmenu__menu-item-summary']} ${classes['active']}`
               : classes['navmenu__menu-item-summary']
           }
+          onClick={handleFeaturesOpen}
         >
           Features
           <button className={classes['navmenu-button']}>
@@ -49,17 +45,14 @@ const NavMenu = ({ isMobile }) => {
           />
         )}
       </li>
-      <li
-        className={classes['navmenu__menu-item']}
-        key="company"
-        onClick={handleCompanyOpen}
-      >
+      <li className={classes['navmenu__menu-item']} key="company">
         <div
           className={
             isCompanyOpen
               ? ` ${classes['navmenu__menu-item-summary']} ${classes['active']}`
               : classes['navmenu__menu-item-summary']
           }
+          onClick={handleCompanyOpen}
         >
           Company
           <button className={classes['navmenu-button']}>

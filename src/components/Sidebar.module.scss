@@ -2,7 +2,7 @@
 
 .sidebar {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 150vh;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,7 @@
     @media screen and (min-width: 50em) {
         width: 0;
         height: 0;
+        min-height: 0;
         opacity: 0;
         display: none;
     }
@@ -23,7 +24,8 @@
         display: flex;
         flex-direction: column;
         width: 65vw;
-        height: 100vh;
+        max-width: 35rem;
+        height: 150vh;
 
         &__icon-close {
             width: 30px;

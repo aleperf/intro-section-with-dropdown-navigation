@@ -3,8 +3,7 @@
 
 .navmenu {
     font-family: $text-font;
-    font-size: 1.8rem;
-
+    font-size: 1.6rem;
     display: flex;
     align-items: flex-start;
 
@@ -16,13 +15,12 @@
 
 
 
+
     &__menu-item {
         color: $medium-gray-color;
-        font-size: 1.4rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         cursor: pointer;
         margin: 1rem;
         position: relative;
@@ -47,8 +45,12 @@
 
 
             &.active {
-                color: $almost-black-color;
+                color: $medium-gray-color;
                 font-weight: 700;
+
+                @media screen and (min-width: 50em) {
+                    color: $almost-black-color;
+                }
 
 
             }
@@ -56,9 +58,14 @@
 
         &-summary:hover,
         &-summary-active {
-            color: $almost-black-color;
+            color: $medium-gray-color;
 
             font-weight: 700;
+
+            @media screen and (min-width: 50em) {
+                color: $almost-black-color;
+            }
+
         }
 
         &__arrow-down {
