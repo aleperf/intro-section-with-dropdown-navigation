@@ -6,14 +6,10 @@ import menu from '../images/icon-menu.svg';
 import NavMenu from './NavMenu';
 
 const Navbar = () => {
-  const {  handleSidebarOpen} = useGlobablContext();
-
+  const { handleSidebarOpen } = useGlobablContext();
 
   return (
     <div className={classes['navbar']}>
-    {/*   {isSidebarOpen && (
-        <Sidebar/>
-      )} */}
       <div className={classes['navbar-container']}>
         <Link to="/">
           <img

@@ -17,6 +17,10 @@ const Sidebar = () => {
           onClick={handleSidebarOpen}
         />
         <NavMenu isMobile={true} />
+        <div className={classes['sidebar__btn-container']}>
+        <button className={classes['sidebar__btn--login']}>Login</button>
+        <button className={classes['sidebar__btn--register']}>Register</button>
+      </div>
       </div>
     </div>
   );
