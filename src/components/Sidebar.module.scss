@@ -16,6 +16,9 @@
     background-color: rgba(0, 0, 0, 0.3);
 
 
+
+
+
     @media screen and (min-width: 50em) {
         width: 0;
         height: 0;
@@ -95,4 +98,33 @@
             border: 1px solid $almost-black-color;
         }
     }
+}
+
+.appear {
+    opacity: 0;
+    transform: translate(100%);
+
+}
+
+.fadein-enter {
+    opacity: 0;
+    transform: translate(100%);
+}
+
+.fadein-enter-active {
+    opacity: 1;
+    transform: translate(0);
+    transition: all 400ms;
+  
+}
+
+.fadein-exit {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.fadein-exit-active {
+    opacity: 0;
+    transform: translate(100%);
+    transition: all 400ms;
 }
