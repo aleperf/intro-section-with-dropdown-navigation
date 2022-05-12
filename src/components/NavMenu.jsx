@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useGlobablContext } from '../context';
 import { ReactComponent as ArrowUp } from '../images/icon-arrow-up.svg';
 import { ReactComponent as ArrowDown } from '../images/icon-arrow-down.svg';
-
+import { CSSTransition } from 'react-transition-group';
+import { useRef } from 'react';
 import Submenu from './Submenu';
 
 const NavMenu = ({ isMobile }) => {
@@ -15,6 +16,9 @@ const NavMenu = ({ isMobile }) => {
     companyItems,
     featuresItems,
   } = useGlobablContext();
+
+  const featureRef = useRef(null);
+  const companyRef = useRef(null);
 
   return (
     <ul className={classes['navmenu']}>
@@ -38,12 +42,25 @@ const NavMenu = ({ isMobile }) => {
           </button>
         </div>
 
-        {isFeaturesOpen && (
+        <CSSTransition
+          in={isFeaturesOpen}
+          nodeRef={featureRef}
+          timeout={400}
+          appear
+          classNames={{
+            enter: classes['slideY-enter'],
+            enterActive: classes['slideY-enter-active'],
+            exit: classes['slideY-exit'],
+            exitActive: classes['slideY-exit-active'],
+          }}
+          unmountOnExit
+        >
           <Submenu
             items={featuresItems}
             align={isMobile ? null : { top: '40px', right: '5px' }}
+            ref={featureRef}
           />
-        )}
+        </CSSTransition>
       </li>
       <li className={classes['navmenu__menu-item']} key="company">
         <div
@@ -64,7 +81,20 @@ const NavMenu = ({ isMobile }) => {
             )}
           </button>
         </div>
-        {isCompanyOpen && (
+
+        <CSSTransition
+          in={isCompanyOpen}
+          nodeRef={companyRef}
+          timeout={400}
+          appear
+          classNames={{
+            enter: classes['slideY-enter'],
+            enterActive: classes['slideY-enter-active'],
+            exit: classes['slideY-exit'],
+            exitActive: classes['slideY-exit-active'],
+          }}
+          unmountOnExit
+        >
           <Submenu
             items={companyItems}
             align={
@@ -75,8 +105,9 @@ const NavMenu = ({ isMobile }) => {
                     left: '5px',
                   }
             }
+            ref={companyRef}
           />
-        )}
+        </CSSTransition>
       </li>
       <li className={classes['navmenu__menu-item']} key="careers">
         <div className={classes['navmenu__menu-item-summary']}>
