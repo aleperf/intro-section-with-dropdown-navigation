@@ -15,10 +15,10 @@ const Sidebar = () => {
       timeout={400}
       appear
       classNames={{
-        enter: classes['fadein-enter'],
-        enterActive: classes['fadein-enter-active'],
-        exit: classes['fadein-exit'],
-        exitActive: classes['fadein-exit-active'],
+        enter: classes['slide-enter'],
+        enterActive: classes['slide-enter-active'],
+        exit: classes['slide-exit'],
+        exitActive: classes['slide-exit-active'],
       }}
       unmountOnExit
     >

@@ -100,31 +100,30 @@
     }
 }
 
-.appear {
-    opacity: 0;
-    transform: translate(100%);
 
-}
 
-.fadein-enter {
-    opacity: 0;
-    transform: translate(100%);
-}
+.slide {
 
-.fadein-enter-active {
-    opacity: 1;
-    transform: translate(0);
-    transition: all 400ms;
-  
-}
+    &-enter {
+        opacity: 0;
+        transform: translate(100%);
+    }
 
-.fadein-exit {
-    opacity: 1;
-    transform: translate(0);
-}
+    &-enter-active {
+        opacity: 1;
+        transform: translate(0);
+        transition: all 400ms;
 
-.fadein-exit-active {
-    opacity: 0;
-    transform: translate(100%);
-    transition: all 400ms;
+    }
+
+    &-exit {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    &-exit-active {
+        opacity: 0;
+        transform: translate(100%);
+        transition: all 400ms;
+    }
 }
