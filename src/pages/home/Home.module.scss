@@ -8,8 +8,6 @@
     width: 100%;
     font-family: $text-font;
     color: $medium-gray-color;
-    padding-bottom: 10rem;
-
 
 
     @media screen and (min-width: 50em) {
@@ -30,8 +28,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        margin-top: 5rem;
         text-align: center;
+
 
 
 
@@ -42,13 +42,14 @@
             width: 40vw;
             text-align: justify;
             margin-right: 50px;
+            margin-top: 0;
+
 
         }
 
 
         @media screen and (min-width: 62.5em) {
             align-items: flex-start;
-
             width: 40vw;
             text-align: justify;
             margin-right: 100px;
@@ -58,7 +59,7 @@
         h1 {
             font-size: 3.5rem;
             color: $almost-black-color;
-            padding: 5rem 0 2rem 0;
+            padding: 2rem 0 2rem 0;
             font-weight: 700;
 
 
@@ -117,7 +118,9 @@
 
 
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             cursor: pointer;
             background-color: transparent;
             color: $almost-black-color;
@@ -142,7 +145,7 @@
 
         @media screen and (min-width: 62.5em) {
 
-            margin-top: 10rem;
+            margin-top: 8rem;
 
         }
 

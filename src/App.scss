@@ -1,3 +1,5 @@
+@use './style/index.scss'as *;
+
 .app {
     display: flex;
     flex-direction: column;
@@ -5,26 +7,5 @@
     width: 100%;
     position: relative;
 
-
-
-
-
-/*     &__content {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 85%;
-
-        @media screen and (min-width: 50em) {
-            flex-direction: row-reverse;
-
-        }
-
-        main {
-            width: 60%;
-            border: 1px solid red;
-        }
-
-
-    } */
 }
+

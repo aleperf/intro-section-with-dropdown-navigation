@@ -1,0 +1,28 @@
+@use '../style/index.scss'as *;
+
+.attribution {
+    margin: 2rem auto;
+    font-family: $text-font;
+    font-size: 1rem;
+    text-align: center;
+    color: $medium-gray-color;
+
+
+
+    @media screen and (min-width: 50em) {
+        font-size: 1.1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+    }
+
+    a {
+        color: $medium-gray-color;
+        font-weight: 700;
+
+        &:visited {
+            color: $medium-gray-color;
+            font-weight: 700;
+        }
+    }
+}

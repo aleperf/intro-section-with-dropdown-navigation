@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro section with dropdown navigation solution
 
-This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). 
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
 
 ## Table of contents
 
@@ -11,16 +11,14 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-
 
 ## Overview
 
 ### The challenge
+
+The challenge consists in build a landing page for SNAP, a ficitonal company helping other companies organizing remote work.
 
 Users should be able to:
 
@@ -28,85 +26,64 @@ Users should be able to:
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
+Bonus:
+
+The original challenge has only a landing page, I added an About page with the fictional history and future developement at SNAP whose content isn't included in the original challenge because I wanted to use the latest version of [React Router](https://reactrouter.com/) and see how it fits with React. The content of text in the About page is just a figment of my imagination (no real facts, no real people), while the orginal image in the About page is from [Pixabay](https://pixabay.com/it/illustrations/e-commerce-shopping-online-6898102/). All other images used in this project are from [Frontend Mentor](https://www.frontendmentor.io).
+
 ### Screenshot
 
-![](./screenshot.jpg)
+- Desktop version
+  <p align="center">
+   <img src="./screenshots/desktop2.png" width="600" alt="screenshot desktop version">
+   </p>
+- Desktop version with opened dropdown menus
+  <p align="center">
+   <img src="./screenshots/desktop1.png" width="600" alt="screenshot desktop version">
+   </p>
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+- Mobile version, closed sidebar
+  <p align="center">
+   <img src="./screenshots/mobile1.png" width="300" alt="screenshot desktop version">
+   </p>
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+  - Mobile version, opened sidebar
+  <p align="center">
+   <img src="./screenshots/mobile2.png" width="300" alt="screenshot desktop version">
+   </p>
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+  - Mobile version, sidebar opened, opened dropdown menus
+  <p align="center">
+   <img src="./screenshots/mobile2.png" width="300" alt="screenshot desktop version">
+   </p>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github code](https://github.com/aleperf/intro-section-with-dropdown-navigation)
+- Live Site URL: [dedicated github page](https://aleperf.github.io/intro-section-with-dropdown-navigation/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [React Transition Group](http://reactcommunity.org/react-transition-group/)
+- [React Router](https://reactrouter.com/)
+- SCSS/SASS
+- Flexbox
+- Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+One of the best feature in React is the ability to make developing reusing components quite easy, respect to reusing pure javascript components. This challenge includes a traditional navbar with dropdown menus in the desktop version and a sidebar with similar dropdown menus in the mobile version. I've built a NavMenu component and a Submenu component that can be used in both mobile and desktop, reducing the amount of repetive code.
 
-To see how you can add code snippets, see below:
+I've also used React Router DOM to manage a mini-navigation between the Homepage (the original design) and the About page (not included in the original design).
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I've used the library React Transition Group, in particular the CSSTranstion component, to implement a slide-in of the sidebar in the mobile version, and to animate the dropdwon menu for mobile and desktop.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [React Router Tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- My Github - [@aleperf](https://github.com/aleperf)

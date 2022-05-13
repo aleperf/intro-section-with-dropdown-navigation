@@ -1,5 +1,6 @@
 import classes from './About.module.scss';
 import mobileImage from '../../images/mobile-2.png';
+import Attribution from '../../components/Attribution';
 const About = () => {
   return (
     <div className={classes['about']}>
@@ -55,15 +56,18 @@ const About = () => {
         </div>
       </main>
       <footer className={classes['disclaimer']}>
-        <h3>Disclaimer</h3>
-        <p>
-          The About Page in this project you are watching now isn't included in
-          the original Frontend Mentors Challenge, I added this page as a bonus
-          and if it's not clear, SNAP, as described here, doesn't exist for real
-          (intending "for real" as this instance of the multiverse) and all the
-          people, companies and facts listed above are the figment of my
-          imagination.
-        </p>
+        <div>
+          <h3>Disclaimer</h3>
+          <p>
+            The About Page in this project you are watching now isn't included
+            in the original Frontend Mentors Challenge, I added this page as a
+            bonus and if it's not clear, SNAP, as described here, doesn't exist
+            for real (intending "for real" as this instance of the multiverse)
+            and all the people, companies and facts listed above are the figment
+            of my imagination.
+          </p>
+        </div>
+        <Attribution />
       </footer>
     </div>
   );
