@@ -83,6 +83,7 @@ I've used the library React Transition Group, in particular the CSSTranstion com
 ### Useful resources
 
 - [React Router Tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
+- [Useful Stackoverflow post](https://stackoverflow.com/questions/54427793/getting-blank-page-after-react-app-publish-in-github) for publishing on Github Pages using React Router
 
 ## Author
 
