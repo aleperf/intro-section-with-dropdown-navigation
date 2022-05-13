@@ -53,7 +53,7 @@ The original challenge has only a landing page, I added an About page with the f
 
   - Mobile version, sidebar opened, opened dropdown menus
   <p align="center">
-   <img src="./screenshots/mobile2.png" width="300" alt="screenshot desktop version">
+   <img src="./screenshots/mobile3.png" width="300" alt="screenshot desktop version">
    </p>
 
 ### Links
